@@ -62,6 +62,14 @@ function validEmail(email) {
     const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return emailRegex.test(email);
 }
+email.addEventListener("keydown", function (e) {
+    if (!e) {
+        var e = window.event;
+    }
+    if (e.key == "Enter") {
+        validateForm(e);
+    }
+}, false);
 hamburgerMenu.addEventListener('click', function () {
     header.classList.toggle('open-menu');
     document.body.classList.toggle('lock-scroll');

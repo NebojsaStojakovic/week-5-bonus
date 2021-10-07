@@ -126,7 +126,7 @@ header {
     width: 100%;
     text-align: center;
     background-color: var(--dark-blue);
-	padding: 105px 0 48px;
+	padding: 40px 0 48px;
 	flex-direction: column;
     opacity: 0;
     transform: scale(0);
@@ -170,6 +170,7 @@ header {
     font-size: 20px;
 	margin: 10px 0;
 	transition: all 0.3s ease-in;
+	text-transform: uppercase;
 }
 .btn-mobile:hover {
     color: var(--soft-red);
@@ -206,8 +207,15 @@ header {
 	align-items: center;
 	gap: 40px;
 }
-.header__social-link:hover img {
-	filter: invert(65%) sepia(49%) saturate(6726%) hue-rotate(325deg) brightness(96%) contrast(103%);
+.header__social-link {
+	font-size: 26px;
+	color: var(--white);
+}
+.header__social-link i {
+	transition: all 0.3s ease-in;
+}
+.header__social-link:hover i {
+	color: var(--soft-red);
 }
 .img-bg-decoration {
   position: relative;
@@ -530,6 +538,7 @@ header {
 	font-style: italic;
 	animation-name: fadeIn;
     animation-duration: 0.2s;
+	color: var(--white);
 }
 .btn-secondary:hover,
 .btn-secondary:focus { 
@@ -574,8 +583,15 @@ footer {
 	gap: 40px;
 	transition: all 0.3s ease;
 }
-.footer__social-link:hover img {
-	filter: invert(65%) sepia(49%) saturate(6726%) hue-rotate(325deg) brightness(96%) contrast(103%);
+.footer__social-link {
+	color: var(--white);
+	font-size: 26px;
+}
+.footer__social-link i {
+	transition: all 0.3s ease-in;
+}
+.footer__social-link:hover i {
+	color: var(--soft-red);
 }
 @keyframes fadeIn {
   0% {
@@ -613,7 +629,7 @@ footer {
 	.header__nav {
 		display: block;
 		position: static;
-		width: auto;
+		/* width: auto; */
 		text-align: center;
 		background-color: transparent;
 		padding: 0;
@@ -631,7 +647,7 @@ footer {
 	.header__list {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: flex-end;
 		gap: 45px;
 	}
 	.header__item {
